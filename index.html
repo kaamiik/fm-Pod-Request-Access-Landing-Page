@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | Pod request access landing page</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <a href="#" aria-label="Pod logo"
+        ><img src="assets/desktop/logo.svg" alt="" class="logo"
+      /></a>
+    </header>
+    <main>
+      <h1 class="main-title"><em>Publish your podcasts</em> everywhere.</h1>
+      <p>
+        Upload your audio to Pod with a single click. We’ll then distribute your
+        podcast to Spotify, Apple Podcasts, Google Podcasts, Pocket Casts and
+        more!
+      </p>
+
+      <ul class="podcast-logos">
+        <li>
+          <a href="#" aria-label="Spotify"
+            ><img src="assets/desktop/spotify.svg" alt=""
+          /></a>
+        </li>
+
+        <li>
+          <a href="#" aria-label="Apple Podcast"
+            ><img src="assets/desktop/apple-podcast.svg" alt="" />
+          </a>
+        </li>
+
+        <li>
+          <a href="#" aria-label="Google Podcast"
+            ><img src="assets/desktop/google-podcasts.svg" alt=""
+          /></a>
+        </li>
+
+        <li>
+          <a href="#" aria-label="Pocket Casts"
+            ><img src="assets/desktop/pocket-casts.svg" alt=""
+          /></a>
+        </li>
+      </ul>
+      <form action="" class="main-form form-text" novalidate>
+        <div class="form-input-container">
+          <input
+            type="email"
+            name="email"
+            id="email-address"
+            placeholder="Email Address"
+            aria-invalid="false"
+            class="form-email"
+          />
+          <p class="error-message hidden">Oops! Please check your email</p>
+        </div>
+        <button type="submit" class="btn">Request access</button>
+      </form>
+    </main>
+  </body>
+</html>

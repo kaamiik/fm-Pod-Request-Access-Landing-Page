@@ -1,0 +1,136 @@
+@use "variables" as *;
+@use "breakpoints" as *;
+@use "functions" as *;
+@use "reset";
+@use "typography";
+
+body {
+  background-image: url(/assets/mobile/image-host.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: overlay;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @include breakpoint(medium) {
+    background-image: url(/assets/tablet/image-host.jpg),
+      url(/assets/desktop/bg-pattern-dots.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-blend-mode: revert;
+    background-size: 490px 767px, 230px 104px;
+    background-position: top right, bottom left rem(30);
+
+    display: revert;
+  }
+
+  @include breakpoint(large) {
+    background-image: url(/assets/desktop/bg-pattern-dots.svg),
+      url(/assets/desktop/image-host.jpg);
+    background-size: 230px 104px, auto auto;
+    background-position: bottom rem(78) right, top rem(130) right;
+  }
+}
+
+.header {
+  padding: rem(60) 0;
+
+  @include breakpoint(medium) {
+    padding: rem(50) rem(40);
+  }
+
+  @include breakpoint(large) {
+    padding: rem(102) rem(165);
+  }
+}
+.logo {
+  margin: 0 auto;
+  @include breakpoint(medium) {
+    margin: revert;
+  }
+}
+
+main {
+  display: grid;
+  margin: rem(94) rem(24);
+  margin-top: 0;
+
+  @include breakpoint(medium) {
+    max-width: rem(635);
+    background-color: $deep-blue;
+    margin: rem(100) rem(40) rem(260);
+    padding-top: rem(90);
+  }
+
+  @include breakpoint(large) {
+    max-width: rem(723);
+    margin: 0 rem(165) rem(130);
+    padding-top: rem(88);
+  }
+}
+
+.podcast-logos {
+  margin-top: rem(33);
+  display: flex;
+  align-items: center;
+  gap: rem(20);
+
+  @include breakpoint(medium) {
+    order: 1;
+    margin-top: rem(64);
+    gap: rem(40);
+  }
+}
+
+.main-form {
+  margin-top: rem(48);
+  display: grid;
+  outline: 2px solid transparent;
+  @include breakpoint(medium) {
+    max-width: rem(427);
+    margin-top: rem(40);
+    grid-template-columns: 1fr auto;
+    background-color: $dark-blue;
+    border-radius: rem(28);
+
+    &:focus-within {
+      outline-color: blue;
+      border-radius: 28px;
+    }
+
+    &:has(input[aria-invalid="true"]) {
+      outline-color: $error-color;
+    }
+  }
+
+  .form-input-container {
+    position: relative;
+    display: grid;
+  }
+
+  input {
+    &:focus-within {
+      outline: 2px solid blue;
+      border-radius: 28px;
+      @include breakpoint(medium) {
+        outline: 0;
+      }
+    }
+
+    &[aria-invalid="true"] {
+      outline: 2px solid $error-color;
+      @include breakpoint(medium) {
+        outline: 0;
+      }
+    }
+  }
+
+  .btn {
+    margin-top: rem(16);
+
+    @include breakpoint(medium) {
+      margin: rem(5);
+    }
+  }
+}

@@ -1,0 +1,79 @@
+@use "variables" as *;
+@use "breakpoints" as *;
+@use "functions" as *;
+
+.main-title {
+  font-size: rem(26);
+  font-weight: 100;
+  text-transform: uppercase;
+  em {
+    font-style: normal;
+    color: $turquoise;
+  }
+  @include breakpoint(medium) {
+    font-size: rem(48);
+  }
+
+  @include breakpoint(large) {
+    font-size: rem(52);
+  }
+}
+
+main > p {
+  margin-top: rem(16);
+
+  @include breakpoint(medium) {
+    max-width: rem(450);
+    margin-top: rem(31);
+  }
+
+  @include breakpoint(large) {
+    margin-top: rem(24);
+  }
+}
+
+.form-text {
+  font-size: rem(14);
+  font-weight: 700;
+  line-height: 2;
+}
+
+/* Input $ Button */
+
+input[type="email"] {
+  border: none;
+  padding: rem(10) rem(32);
+  border-radius: rem(28);
+  background-color: $dark-blue;
+  color: $white;
+}
+
+.btn {
+  color: $deep-blue;
+  background-color: $turquoise;
+  display: inline-block;
+  text-decoration: none;
+  border-radius: rem(28);
+  padding: rem(9) rem(27);
+  border: none;
+  line-height: 2;
+}
+
+.btn:focus,
+.btn:hover {
+  cursor: pointer;
+  background-color: $turquoise-hover;
+}
+
+.error-message {
+  font-size: rem(12);
+  font-weight: bold;
+  color: $error-color;
+  padding-left: rem(32);
+  text-align: left;
+
+  @include breakpoint(medium) {
+    position: absolute;
+    bottom: rem(-24);
+  }
+}

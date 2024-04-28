@@ -1,0 +1,324 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+p {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.55;
+  font-family: "Chivo", sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 300;
+  color: #c2cbe5;
+  background: #121725;
+  text-align: center;
+}
+@media (min-width: 48rem) {
+  body {
+    text-align: left;
+    font-size: 1.125rem;
+  }
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.2;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.main-title {
+  font-size: 1.625rem;
+  font-weight: 100;
+  text-transform: uppercase;
+}
+.main-title em {
+  font-style: normal;
+  color: #54e6af;
+}
+@media (min-width: 48rem) {
+  .main-title {
+    font-size: 3rem;
+  }
+}
+@media (min-width: 85rem) {
+  .main-title {
+    font-size: 3.25rem;
+  }
+}
+
+main > p {
+  margin-top: 1rem;
+}
+@media (min-width: 48rem) {
+  main > p {
+    max-width: 28.125rem;
+    margin-top: 1.9375rem;
+  }
+}
+@media (min-width: 85rem) {
+  main > p {
+    margin-top: 1.5rem;
+  }
+}
+
+.form-text {
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 2;
+}
+
+/* Input $ Button */
+input[type=email] {
+  border: none;
+  padding: 0.625rem 2rem;
+  border-radius: 1.75rem;
+  background-color: #2c344b;
+  color: #ffffff;
+}
+
+.btn {
+  color: #121725;
+  background-color: #54e6af;
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 1.75rem;
+  padding: 0.5625rem 1.6875rem;
+  border: none;
+  line-height: 2;
+}
+
+.btn:focus,
+.btn:hover {
+  cursor: pointer;
+  background-color: #b3ffe2;
+}
+
+.error-message {
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: #fb3e3e;
+  padding-left: 2rem;
+  text-align: left;
+}
+@media (min-width: 48rem) {
+  .error-message {
+    position: absolute;
+    bottom: -1.5rem;
+  }
+}
+
+body {
+  background-image: url(/assets/mobile/image-host.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: overlay;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media (min-width: 48rem) {
+  body {
+    background-image: url(/assets/tablet/image-host.jpg), url(/assets/desktop/bg-pattern-dots.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-blend-mode: revert;
+    background-size: 490px 767px, 230px 104px;
+    background-position: top right, bottom left 1.875rem;
+    display: revert;
+  }
+}
+@media (min-width: 85rem) {
+  body {
+    background-image: url(/assets/desktop/bg-pattern-dots.svg), url(/assets/desktop/image-host.jpg);
+    background-size: 230px 104px, auto auto;
+    background-position: bottom 4.875rem right, top 8.125rem right;
+  }
+}
+
+.header {
+  padding: 3.75rem 0;
+}
+@media (min-width: 48rem) {
+  .header {
+    padding: 3.125rem 2.5rem;
+  }
+}
+@media (min-width: 85rem) {
+  .header {
+    padding: 6.375rem 10.3125rem;
+  }
+}
+
+.logo {
+  margin: 0 auto;
+}
+@media (min-width: 48rem) {
+  .logo {
+    margin: revert;
+  }
+}
+
+main {
+  display: grid;
+  margin: 5.875rem 1.5rem;
+  margin-top: 0;
+}
+@media (min-width: 48rem) {
+  main {
+    max-width: 39.6875rem;
+    background-color: #121725;
+    margin: 6.25rem 2.5rem 16.25rem;
+    padding-top: 5.625rem;
+  }
+}
+@media (min-width: 85rem) {
+  main {
+    max-width: 45.1875rem;
+    margin: 0 10.3125rem 8.125rem;
+    padding-top: 5.5rem;
+  }
+}
+
+.podcast-logos {
+  margin-top: 2.0625rem;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+@media (min-width: 48rem) {
+  .podcast-logos {
+    order: 1;
+    margin-top: 4rem;
+    gap: 2.5rem;
+  }
+}
+
+.main-form {
+  margin-top: 3rem;
+  display: grid;
+  outline: 2px solid transparent;
+}
+@media (min-width: 48rem) {
+  .main-form {
+    max-width: 26.6875rem;
+    margin-top: 2.5rem;
+    grid-template-columns: 1fr auto;
+    background-color: #2c344b;
+    border-radius: 1.75rem;
+  }
+  .main-form:focus-within {
+    outline-color: blue;
+    border-radius: 28px;
+  }
+  .main-form:has(input[aria-invalid=true]) {
+    outline-color: #fb3e3e;
+  }
+}
+.main-form .form-input-container {
+  position: relative;
+  display: grid;
+}
+.main-form input:focus-within {
+  outline: 2px solid blue;
+  border-radius: 28px;
+}
+@media (min-width: 48rem) {
+  .main-form input:focus-within {
+    outline: 0;
+  }
+}
+.main-form input[aria-invalid=true] {
+  outline: 2px solid #fb3e3e;
+}
+@media (min-width: 48rem) {
+  .main-form input[aria-invalid=true] {
+    outline: 0;
+  }
+}
+.main-form .btn {
+  margin-top: 1rem;
+}
+@media (min-width: 48rem) {
+  .main-form .btn {
+    margin: 0.3125rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
